@@ -63,7 +63,7 @@ namespace ScottSaveEditor
             }
 
             bread.BaseStream.Position = 0x80;
-            checkBox1.Checked = bread.ReadByte() != 0;
+            checkBoxUnlockKnives.Checked = bread.ReadByte() != 0;
 
             bread.Close();
             saveToolStripMenuItem.Enabled = true;
@@ -101,7 +101,7 @@ namespace ScottSaveEditor
             }
 
             bread.BaseStream.Position = 0x80;
-            bread.Write((byte)(checkBox1.Checked?1:0));
+            bread.Write((byte)(checkBoxUnlockKnives.Checked?1:0));
 
             bread.Close();
             MessageBox.Show("File saved!");

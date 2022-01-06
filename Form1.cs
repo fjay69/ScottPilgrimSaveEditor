@@ -21,6 +21,7 @@ namespace ScottSaveEditor
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "file00.dat|file00.dat";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 output_win = openFileDialog1.FileName;
             else
